@@ -106,7 +106,7 @@ class RangeBase(luigi.WrapperTask):
     now = luigi.IntParameter(
         default=None,
         description="set to override current time. In seconds since epoch")
-    param_name = luigi.Parameter(
+    param_name = luigi.OptionalParameter(
         default=None,
         description="parameter name used to pass in parameterized value. Defaults to None, meaning use first positional parameter",
         positional=False)
